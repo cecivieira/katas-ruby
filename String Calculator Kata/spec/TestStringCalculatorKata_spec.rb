@@ -42,7 +42,12 @@ RSpec.describe StringCalculatorKata do
 
         it "Calling Add with a negative number will throw an exception \"negatives not allowed\" - and the negative that was passed." do
             stringCalculatorKata = StringCalculatorKata.new            
-            expect{stringCalculatorKata.Add("&\n4&-2")}.to raise_error("Negatives not allowed (-2)")
+            expect{stringCalculatorKata.Add("&\n4&-2")}.to raise_error('Negatives not allowed ["-2"]')
+        end
+
+        it "Calling Add with a negative number will throw an exception \"negatives not allowed\" - and the negative that was passed." do
+            stringCalculatorKata = StringCalculatorKata.new
+            expect{stringCalculatorKata.Add(";\n4;-2;-4")}.to raise_error('Negatives not allowed ["-2", "-4"]')
         end
 
         
