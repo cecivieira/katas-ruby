@@ -1,9 +1,12 @@
 String Calculator 
 by http://osherove.com/tdd-kata-1/
 
-1. Create a simple String calculator with a method int Add(string numbers). The method can take 0, 1 or 2 numbers, and will return their sum (for an empty string it will return 0). For example "" or "1" or "1,2"
+1. Create a simple String calculator with a method int Add(string numbers). The method can take 0, 1 
+or 2 numbers, and will return their sum (for an empty string it will return 0). For example "" or "1" 
+or "1,2"
     1.1 Start with the simplest test case of an empty string and move to 1 and two numbers
-    1.2 Remember to solve things as simply as possible so that you force yourself to write tests you did not think about
+    1.2 Remember to solve things as simply as possible so that you force yourself to write tests 
+    you did not think about
     1.3 Remember to refactor after each passing test
 
 2. Allow the Add method to handle an unknown amount of numbers
@@ -12,7 +15,9 @@ by http://osherove.com/tdd-kata-1/
     3.1 the following input is ok: "1\n2,3" (will equal 6)
     3.2 the following input is NOT ok: "1,\n" (not need to prove it - just clarifying)
 
-4. Support different delimiters. To change a delimiter, the beginning of the string will contain a separate line that looks like this: [delimiter]\n[numbers...], for example ;\n1;2 should return three where the default delimiter is ; .
+4. Support different delimiters. To change a delimiter, the beginning of the string will contain a 
+separate line that looks like this: [delimiter]\n[numbers...], for example ;\n1;2 should return 
+three where the default delimiter is ; .
     4.1 he first line is optional. all existing scenarios should still be supported
 
 5. Calling Add with a negative number will throw an exception "negatives not allowed" - and the negative that was passed.

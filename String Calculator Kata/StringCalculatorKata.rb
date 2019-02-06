@@ -2,7 +2,13 @@ class StringCalculatorKata
     
     def Add(string)
         sum = 0
-        array = string.split("\n")
+
+        if string.start_with?(/[^0-9-]+/)
+            array = string.split(string[1])
+        else
+            array = string.split(",\n")
+        end
+
         if array.length == 1
             string.each_char {|number|
                 sum += process_number(number)
