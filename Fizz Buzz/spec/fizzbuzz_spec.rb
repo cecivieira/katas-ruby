@@ -15,6 +15,12 @@ RSpec.describe 'Fizzbuzz' do
       contador = fizzBuzz.contador(5)
       expect(contador).to eq([1,2,'Fizz',4,'Buzz'])
     end
+
+    it "Print 'FizzBuzz' instead of number which is divisible by both 3 and 5" do
+      fizzBuzz = Fizzbuzz.new
+      contador = fizzBuzz.contador(15)
+      expect(contador).to eq([1,2,'Fizz',4,'Buzz','Fizz',7,8,'Fizz','Buzz',11,'Fizz',13,14,'FizzBuzz'])
+    end
   end
 
 end
