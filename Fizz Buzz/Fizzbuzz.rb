@@ -13,19 +13,19 @@ class Fizzbuzz
           array[index] = 'Buzz'
         end
       end
+
     else
-      array = []
-      array.push(number1)
-      array.each do |number|
-        index = number-1
-        if number % 15 == 0
-          array[index] = 'FizzBuzz'
-        elsif number % 3 == 0
-          array[index] = 'Fizz'
-        elsif number % 5 == 0
-          array[index] = 'Buzz'
-        end
+      array = [number1]
+      if number1 % 15 == 0
+        array[0] = 'FizzBuzz'
+      elsif number1 % 3 == 0
+        array[0] = 'Fizz'
+      elsif number1 % 5 == 0
+        array[0] = 'Buzz'
       end
+      
+     array
     end
   end
+
 end
